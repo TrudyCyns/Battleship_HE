@@ -10,7 +10,7 @@ The game relies on the additive homomorphic properties of the Paillier cryptosys
 
 In a standard battleship game, the server knows the ship locations and the guess. In this version, the Network uses the following homomorphic operation to perform the check:
 
-1. **Defender's Board**: Each cell value is individually encrypted using the Attacker's Public Key ($E_{Pub_A}(B_{cell})$).
+1. **Defender's Board**: Each cell value is individually encrypted using the Attacker's Public Key.
 2. **Server Computation (Hit Check)**: The Server computes the difference between the encrypted cell value and an encrypted '1'.
 $$E_{Result} = \big(E_{Pub_A}(B_{cell}) - 1\big) \times \text{Random Blinder}$$
 
